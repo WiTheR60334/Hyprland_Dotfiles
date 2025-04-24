@@ -39,8 +39,8 @@ entry {
 /* ---- Listview ---- */
 listview {
   columns: 3;
-  lines: 3;
-  spacing: 4px;
+  lines: 6;
+  spacing: 8px;
   border-radius: 10px;
 }
 
