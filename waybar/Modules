@@ -191,8 +191,8 @@
 	"format": "{}",
 	"max-length": 25,
 	"separate-outputs": true,
-	"offscreen-css": true,
-	"offscreen-css-text": "(inactive)",
+	// "offscreen-css": true,
+	// "offscreen-css-text": "(inactive)",
 	"rewrite": {
 		"(.*) — Mozilla Firefox": " $1",
 		"(.*) - fish": "> [$1]",

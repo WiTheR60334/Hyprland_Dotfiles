@@ -5,7 +5,7 @@
 
 configuration {
     font:                       "JetBrainsMono Nerd Font SemiBold 12";
-    modi:                       "drun,run,filebrowser";
+    modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
     display-drun:               "Apps";
     display-run:                "Run";

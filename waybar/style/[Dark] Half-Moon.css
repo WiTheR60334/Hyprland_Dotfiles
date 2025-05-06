@@ -5,13 +5,13 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font";
+	/* font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-ser if; */
     font-weight: bold;
 	min-height: 0;  
     /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
     font-size: 97%;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
-
 
 window#waybar {
   background-color: rgba(26,27,38,0);
@@ -49,7 +49,8 @@ window#waybar.empty #window {
   color: #0F1419;
   background: linear-gradient(45deg, #95E6CB, #59C2FF, #D2A6FF);
   opacity: 0.5;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682); */
 }
 
 #taskbar button.active,
@@ -62,7 +63,8 @@ window#waybar.empty #window {
   background: linear-gradient(45deg, #59C2FF, #D2A6FF);
   opacity: 1.0;
   min-width: 40px;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682); */
 }
 
 #workspaces button:hover {
@@ -70,7 +72,8 @@ window#waybar.empty #window {
   color: #0F1419;
   background: linear-gradient(45deg, #59C2FF, #D2A6FF);
   opacity: 0.8;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682); */
 
 }
 @keyframes gradient_horizontal {
