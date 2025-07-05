@@ -165,6 +165,25 @@
 	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
 },
 
+"clock#6": {
+	"format": "{:%I : %M %p - %d/%b}",//for AM/PM
+	//"format": "{:%H:%M - %d/%b}",// 24H
+	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "year",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"days": "<span color='#ecc6d9'><b>{}</b></span>",
+				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		}
+},
+
 "cpu": {
 	"format": "{usage}% 󰍛",
 	"interval": 1,
@@ -298,7 +317,7 @@
 "network#speed": {
 	"interval": 1,
 	"format": "{ifname}",
-	"format-wifi": "{icon}   {bandwidthDownBytes}  {bandwidthUpBytes}",
+	"format-wifi": "{icon}    {bandwidthDownBytes}   {bandwidthUpBytes}",
 	"format-ethernet": "󰌘   {bandwidthDownBytes}  {bandwidthUpBytes}",
 	"format-disconnected": "󰌙",
 	"tooltip-format": "{ipaddr}",
@@ -306,7 +325,25 @@
 	"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
 	"tooltip-format-ethernet": "{ifname} 󰌘",
 	"tooltip-format-disconnected": "󰌙 Disconnected",
-	"min-length": 24,
+	"min-length": 10,
+	"max-length": 24,
+	"format-icons": [
+		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+	]
+},
+
+"network#speed2": {
+	"interval": 1,
+	"format": "{ifname}",
+	"format-wifi": "   {bandwidthDownBytes}    {bandwidthUpBytes}",
+	"format-ethernet": "󰌘     {bandwidthDownBytes}    {bandwidthUpBytes}",
+	"format-disconnected": "󰌙",
+	"tooltip-format": "{ipaddr}",
+	"format-linked": "󰈁 {ifname} (No IP)",
+	"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+	"tooltip-format-ethernet": "{ifname} 󰌘",
+	"tooltip-format-disconnected": "󰌙 Disconnected",
+	"min-length": 10,
 	"max-length": 24,
 	"format-icons": [
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
@@ -386,7 +423,20 @@
 
 "tray": {
 	"icon-size": 20,
-	"spacing": 4,
+	"spacing": 8,
+},
+
+"network#speed3": {
+	"format-wifi": "",
+	"format-disconnected": "󰖪",
+	// "tooltip-format": "{ipaddr}  {bandWidthDownBits}  {bandwidthUpBits}",
+	// "format-linked": "󰈁 {ifname} (No IP)",
+	// "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+	// "tooltip-format-ethernet": "{ifname} 󰌘",
+	// "tooltip-format-disconnected": "󰌙 Disconnected",
+	// "min-length": 10,
+	// "max-length": 24,
+	"on-click": "sh -c 'pgrep nm-applet || nm-applet --indicator'"
 },
 
 "wireplumber": {
