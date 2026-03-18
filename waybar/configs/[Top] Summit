@@ -1,0 +1,49 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DUAL TOP and BOTTOM ### //
+
+[{
+"include": [
+    "$HOME/.config/waybar/Modules",
+    "$HOME/.config/waybar/ModulesWorkspaces",
+    "$HOME/.config/waybar/ModulesCustom",
+    "$HOME/.config/waybar/ModulesGroups",
+],
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 2,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+	"hyprland/workspaces#pacman",
+	"cpu", 
+	"temperature",
+	"memory"
+	//"group/mobo_drawer"]
+	],
+  
+"modules-center": [
+	// "idle_inhibitor",
+	"clock#3"  
+	// "custom/light_dark"
+	], 
+
+"modules-right": [
+	"network#speed",
+	"tray",
+	"battery", 
+	// "pulseaudio",
+	"group/audio",
+	// "pulseaudio#microphone",
+	// "bluetooth",
+	//"custom/updater",
+	"custom/power",
+	]
+}]
