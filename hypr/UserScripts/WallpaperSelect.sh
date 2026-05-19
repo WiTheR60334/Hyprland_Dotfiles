@@ -15,7 +15,7 @@ iDIRi="$HOME/.config/swaync/icons"
 # variables
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 # swww transition config
-FPS=60
+FPS=120
 TYPE="any"
 DURATION=2
 BEZIER=".43,1.19,1,.4"
